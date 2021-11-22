@@ -13,9 +13,12 @@
 		67399C30274C29BB007C4EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67399C2E274C29BB007C4EF6 /* Main.storyboard */; };
 		67399C32274C29BD007C4EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67399C31274C29BD007C4EF6 /* Assets.xcassets */; };
 		67399C35274C29BD007C4EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67399C33274C29BD007C4EF6 /* LaunchScreen.storyboard */; };
+		7C30AA4D88B255A3CF45970B /* Pods_movie_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A96F9C87AF4AFD1C5FA6DCF /* Pods_movie_master.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A96F9C87AF4AFD1C5FA6DCF /* Pods_movie_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movie_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE4EF27CA070A508263A152 /* Pods-movie-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-master.debug.xcconfig"; path = "Target Support Files/Pods-movie-master/Pods-movie-master.debug.xcconfig"; sourceTree = "<group>"; };
 		67399C25274C29BB007C4EF6 /* movie-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movie-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67399C28274C29BB007C4EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67399C2A274C29BB007C4EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		67399C31274C29BD007C4EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67399C34274C29BD007C4EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67399C36274C29BD007C4EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D0ED0C583735D38C54E6DE6 /* Pods-movie-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-master.release.xcconfig"; path = "Target Support Files/Pods-movie-master/Pods-movie-master.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C30AA4D88B255A3CF45970B /* Pods_movie_master.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		296D289F1E420F7930D37239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A96F9C87AF4AFD1C5FA6DCF /* Pods_movie_master.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67399C1C274C29BB007C4EF6 = {
 			isa = PBXGroup;
 			children = (
 				67399C27274C29BB007C4EF6 /* movie-master */,
 				67399C26274C29BB007C4EF6 /* Products */,
+				E5791BFC42F063B08176884B /* Pods */,
+				296D289F1E420F7930D37239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "movie-master";
 			sourceTree = "<group>";
 		};
+		E5791BFC42F063B08176884B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BE4EF27CA070A508263A152 /* Pods-movie-master.debug.xcconfig */,
+				6D0ED0C583735D38C54E6DE6 /* Pods-movie-master.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67399C39274C29BD007C4EF6 /* Build configuration list for PBXNativeTarget "movie-master" */;
 			buildPhases = (
+				DF1EB6A2BD321D0EFF33E9C0 /* [CP] Check Pods Manifest.lock */,
 				67399C21274C29BB007C4EF6 /* Sources */,
 				67399C22274C29BB007C4EF6 /* Frameworks */,
 				67399C23274C29BB007C4EF6 /* Resources */,
+				8FEBBF1C40A5CAFFA971546D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FEBBF1C40A5CAFFA971546D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movie-master/Pods-movie-master-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movie-master/Pods-movie-master-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movie-master/Pods-movie-master-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1EB6A2BD321D0EFF33E9C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movie-master-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67399C21274C29BB007C4EF6 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		67399C3A274C29BD007C4EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BE4EF27CA070A508263A152 /* Pods-movie-master.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,12 +367,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ftrn.moviemaster.movie-master";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ftrn.movie-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,6 +383,7 @@
 		};
 		67399C3B274C29BD007C4EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D0ED0C583735D38C54E6DE6 /* Pods-movie-master.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,12 +397,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ftrn.moviemaster.movie-master";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ftrn.movie-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
