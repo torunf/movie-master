@@ -43,7 +43,7 @@ final class MovieDetailViewController: UIViewController {
     let lblMovieDate: UILabel = {
         let label = UILabel()
         label.text = ""
-        label.font = UIFont(name: "HelveticaNeue", size: 15)
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
         label.textAlignment = .right
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -135,7 +135,7 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
         imgPoster.kf.setImage(with: url)
         lblMovieName.text = presentation.name
         lblMovieDetail.text = presentation.detail
-        lblMovieDate.text = "Rating: \(presentation.rating) | First air date: \(presentation.firstAirDateFormatted)"
+        lblMovieDate.text = "Rating: \(presentation.rating)(\(presentation.vote)) | First air date: \(presentation.firstAirDateFormatted)"
         
     }
 }

@@ -16,19 +16,27 @@ public struct MovieDetail: Codable, Equatable {
         case detail = "overview"
         case firstAirDate = "first_air_date"
         case poster = "poster_path"
+        case vote = "vote_count"
     }
     
     public let id: Int
     public let name: String
     public let detail: String
     public let rating: Float
-    public let firstAirDate: Date
+    public let firstAirDate: Date?
     public let poster: String?
+    public let vote: Int
 
     public var firstAirDateFormatted: String {
+        if (firstAirDate == nil) {
+            return "Unknown!"
+        }
+        else if (firstAirDate! == Date(timeIntervalSince1970: 0)) {
+            return "Unknown!"
+        }
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "dd.MM.yyyy"
-        return dateFormatterPrint.string(from: firstAirDate)
+        return dateFormatterPrint.string(from: firstAirDate!)
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -39,5 +47,6 @@ public struct MovieDetail: Codable, Equatable {
         try container.encode(detail, forKey: .detail)
         try container.encode(firstAirDate, forKey: .firstAirDate)
         try container.encode(poster, forKey: .poster)
+        try container.encode(vote, forKey: .vote)
     }
 }
