@@ -11,11 +11,14 @@ public enum MovieRequests: Request {
     
     
     case popular(api_key: String, page: Int)
+    case get(api_key: String, movieId: Int)
 
     public var path: String {
         switch self {
         case .popular(_, _):
-            return "Popular movies"
+            return "tv/popular"
+        case .get(_, let id):
+            return "tv/\(id)"
         }
     }
     
@@ -23,14 +26,18 @@ public enum MovieRequests: Request {
         switch self {
         case .popular:
             return .get
+        case .get:
+            return .get
         }
     }
     
     public var parameters: RequestParameters? {
         switch self {
-        case .popular(let api_key, let page):
-            return .url(["api_key": String(api_key),
+        case .popular(_, let page):
+            return .url(["api_key": Utils.Env.ApiKey,
                          "page": String(page)])
+        case .get(_, _):
+            return .url(["api_key": Utils.Env.ApiKey])
         }
     }
     
@@ -44,6 +51,8 @@ public enum MovieRequests: Request {
     public var dataType: DataType {
         switch self {
         case .popular:
+            return .data
+        case .get:
             return .data
         }
     }

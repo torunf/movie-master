@@ -44,10 +44,6 @@ public class Response {
 
         let jsonx: JSON? = nil
         
-        let count = dataResponse.response?.headers["Spacex-Api-Count"]
-        let tCount: Int = count == nil ? 0 : Int(count!)!
-        self.dataCount = tCount
-        
         switch request.dataType {
         case .data:
             self.data = data

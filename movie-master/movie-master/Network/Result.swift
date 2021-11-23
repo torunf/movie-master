@@ -8,6 +8,6 @@
 import Foundation
 
 public enum MovieResult<Success, Failure> {
-    case success(Success, dataCount: Int = 0)
+    case success(Success)
     case failure(Failure)
 }

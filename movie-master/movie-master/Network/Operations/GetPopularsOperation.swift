@@ -13,13 +13,13 @@ protocol GetPopularsOperationType {
     var page: Int { get set }
     var request: Request { get }
     init(api_key: String, page: Int)
-    func execute(in dispatcher: Dispatcher, completion: @escaping (MovieResult<[Movie], Error>) -> Void)
+    func execute(in dispatcher: Dispatcher, completion: @escaping (MovieResult<MovieList, Error>) -> Void)
 }
 
 final class GetPopularsOperation: Operation, GetPopularsOperationType {
 
     typealias D = Dispatcher
-    typealias R = [Movie]
+    typealias R = MovieList
     
     // MARK: Request parameters
     var api_key: String
@@ -39,7 +39,7 @@ final class GetPopularsOperation: Operation, GetPopularsOperationType {
         MovieRequests.popular(api_key: api_key, page: page)
     }
     
-    func execute(in dispatcher: Dispatcher, completion: @escaping (MovieResult<[Movie], Error>) -> Void) {
-        self.executeBaseArrayResponse(dispatcher: dispatcher, completion: completion)
+    func execute(in dispatcher: Dispatcher, completion: @escaping (MovieResult<MovieList, Error>) -> Void) {
+        self.executeBaseResponse(dispatcher: dispatcher, completion: completion)
     }
 }

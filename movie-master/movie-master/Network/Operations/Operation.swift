@@ -37,11 +37,20 @@ extension Operation {
             try dispatcher.execute(request: self.request, completion: { (xresponse: Response) in
 
                 if let json = xresponse.data {
+                    let formatter = DateFormatter()
                     let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .secondsSince1970
+                    decoder.dateDecodingStrategy = .custom { decoder in
+                            let container = try decoder.singleValueContainer()
+                            let dateString = try container.decode(String.self)
+                            formatter.dateFormat = "yyyy-MM-dd"
+                            if let date = formatter.date(from: dateString) {
+                                return date
+                            }
+                            return Date(timeIntervalSince1970: 0)
+                        }
                     do {
                         let response = try decoder.decode(T.self, from: json)
-                        completion(.success(response, dataCount: xresponse.dataCount))
+                        completion(.success(response))
                     } catch let error {
                         completion(.failure(error))
                     }
@@ -67,7 +76,7 @@ extension Operation {
                     decoder.dateDecodingStrategy = .secondsSince1970
                     do {
                         let response = try decoder.decode([T].self, from: json)
-                        completion(.success(response, dataCount: xresponse.dataCount))
+                        completion(.success(response))
                     } catch let error {
                         completion(.failure(error))
                     }
