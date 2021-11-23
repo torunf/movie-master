@@ -9,7 +9,8 @@ import Foundation
 
 struct Utils {
     struct Env {
-        static let SpaceX = Environment("SpaceX API", host: "https://api.spacexdata.com/v3")
+        static let MovieApi = Environment("Movie API", host: "https://api.themoviedb.org/3")
+        static let ApiKey:String = "2dae3c37758b8193ee4991d4b0462e50"
     }
 }
 
