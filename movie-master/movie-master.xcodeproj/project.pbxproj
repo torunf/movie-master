@@ -40,6 +40,7 @@
 		67399C80274C4496007C4EF6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67399C7F274C4496007C4EF6 /* UIView+.swift */; };
 		67399C83274C45A7007C4EF6 /* MovieDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67399C82274C45A7007C4EF6 /* MovieDetailRow.swift */; };
 		67399C85274D69EA007C4EF6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67399C84274D69EA007C4EF6 /* MovieList.swift */; };
+		67399C89274D8F4B007C4EF6 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67399C88274D8F4B007C4EF6 /* Date+.swift */; };
 		7C30AA4D88B255A3CF45970B /* Pods_movie_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A96F9C87AF4AFD1C5FA6DCF /* Pods_movie_master.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		67399C7F274C4496007C4EF6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		67399C82274C45A7007C4EF6 /* MovieDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRow.swift; sourceTree = "<group>"; };
 		67399C84274D69EA007C4EF6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		67399C88274D8F4B007C4EF6 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		6D0ED0C583735D38C54E6DE6 /* Pods-movie-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie-master.release.xcconfig"; path = "Target Support Files/Pods-movie-master/Pods-movie-master.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				67399C7F274C4496007C4EF6 /* UIView+.swift */,
+				67399C88274D8F4B007C4EF6 /* Date+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				67399C56274C3314007C4EF6 /* GetDetailOperation.swift in Sources */,
 				67399C74274C3FD1007C4EF6 /* MovieListContracts.swift in Sources */,
 				67399C64274C3425007C4EF6 /* Result.swift in Sources */,
+				67399C89274D8F4B007C4EF6 /* Date+.swift in Sources */,
 				67399C44274C2F11007C4EF6 /* AppContainer.swift in Sources */,
 				67399C4A274C3126007C4EF6 /* MovieApiService.swift in Sources */,
 			);

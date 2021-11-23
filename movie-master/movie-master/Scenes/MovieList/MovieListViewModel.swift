@@ -92,7 +92,7 @@ extension MovieListViewModel: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? MovieDetailRow {
             let item = allMovies![indexPath.row]
             cell.lblMovieHeader?.text = item.name
-            cell.lblMovieDate?.text = "Rating: \(item.rating) | First air date: \(item.firstAirDateFormatted)"
+            cell.lblMovieDate?.text = "Rating: \(item.rating) | First air date: \(item.firstAirDate?.MovieFormatted ?? "Unknown!")"
             
             let url: URL?
             if item.thumbnail != nil {

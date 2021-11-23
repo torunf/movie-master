@@ -26,18 +26,6 @@ public struct MovieDetail: Codable, Equatable {
     public let firstAirDate: Date?
     public let poster: String?
     public let vote: Int
-
-    public var firstAirDateFormatted: String {
-        if (firstAirDate == nil) {
-            return "Unknown!"
-        }
-        else if (firstAirDate! == Date(timeIntervalSince1970: 0)) {
-            return "Unknown!"
-        }
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd.MM.yyyy"
-        return dateFormatterPrint.string(from: firstAirDate!)
-    }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)

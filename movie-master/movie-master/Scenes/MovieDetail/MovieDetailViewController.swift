@@ -135,7 +135,7 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
         imgPoster.kf.setImage(with: url)
         lblMovieName.text = presentation.name
         lblMovieDetail.text = presentation.detail
-        lblMovieDate.text = "Rating: \(presentation.rating)(\(presentation.vote)) | First air date: \(presentation.firstAirDateFormatted)"
+        lblMovieDate.text = "Rating: \(presentation.rating)(\(presentation.vote)) | First air date: \(presentation.firstAirDate?.MovieFormatted ?? "Unknown!")"
         
     }
 }
