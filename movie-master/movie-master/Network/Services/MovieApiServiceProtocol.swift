@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 public protocol MovieApiServiceProtocol {
-    func fetchPopularMovies(completion: @escaping (MovieResult<[Movie], Error>) -> Void)
+    func fetchPopularMovies(page: Int, completion: @escaping (MovieResult<MovieList, Error>) -> Void)
+    func fetchMovie(movieId: Int, completion: @escaping (MovieResult<MovieDetail, Error>) -> Void)
 }
 
